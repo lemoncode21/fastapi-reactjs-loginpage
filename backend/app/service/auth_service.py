@@ -36,7 +36,7 @@ class AuthService:
         image_str = "data:image/png;base64," + image_str.decode('utf-8')
 
         # mapping request data to class entity table
-        _person = Person(id=_person_id, name=register.password, birth=birth_date, sex=register.sex,
+        _person = Person(id=_person_id, name=register.name, birth=birth_date, sex=register.sex,
                          profile=image_str, phone_number=register.phone_number)
 
         _users = Users(id=_users_id, username=register.username, email=register.email,
